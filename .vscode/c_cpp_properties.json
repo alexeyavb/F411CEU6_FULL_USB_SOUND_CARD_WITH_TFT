@@ -1,0 +1,42 @@
+{
+    "configurations": [
+        {
+            "name": "STM32",
+            "compilerPath": "/opt/ST/STM32CubeCLT/GNU-tools-for-STM32/bin/arm-none-eabi-gcc",
+            "includePath": [
+                "${workspaceFolder}/Inc",
+                "${workspaceFolder}/Drivers/STM32F4xx_HAL_Driver/Inc",
+                "${workspaceFolder}/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy",
+                "${workspaceFolder}/Drivers/CMSIS/Include",
+                "${workspaceFolder}/Drivers/CMSIS/Device/ST/STM32F4xx/Include",
+                "${workspaceFolder}/Drivers/BSP/",
+                "${workspaceFolder}/Drivers/st7735",
+                "${workspaceFolder}/stm32_usb/Core/Inc",
+                "${workspaceFolder}/stm32_usb/Class/AUDIO/Inc",
+                "${workspaceFolder}/drivers/ST7735",
+                "${workspaceFolder}/lib/DSP/Include",
+                "${workspaceFolder}/drivers/CMSIS/DSP/Include"
+            ],
+            "defines": [
+                "STM32F411xE",
+                "USE_HAL_DRIVER",
+                "USE_MATH_FF",
+                "USE_USB_FS",
+                "DEBUG_FEEDBACK_ENDPOINT",
+                "USE_FULL_ASSERT"
+            ],
+            "cStandard": "c17",
+            "cppStandard": "c++17",
+            "intelliSenseMode": "gcc-arm",
+            "mergeConfigurations": false,
+            "browse": {
+                "path": [
+                    "${workspaceFolder}/**",
+                    "${workspaceFolder}/Drivers/**"
+                ],
+                "limitSymbolsToIncludedHeaders": true
+            }
+        }
+    ],
+    "version": 4
+}

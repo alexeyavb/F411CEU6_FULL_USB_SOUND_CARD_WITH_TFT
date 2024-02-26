@@ -1,0 +1,19 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Cortex Debug",
+            "cwd": "${workspaceRoot}",
+            "executable": "build/usb_audio_i2s.elf",
+            "request": "launch",
+            "type": "cortex-debug",
+            "servertype": "stlink",
+            "runToEntryPoint": "main",
+            "preLaunchTask": "build",
+            "device": "STM32F411CE",
+            "svdFile": "/opt/ST/STM32CubeCLT/STMicroelectronics_CMSIS_SVD/STM32F411.svd",
+            "configFiles": [],
+            "showDevDebugOutput": "raw" ,
+},
+    ]
+}
