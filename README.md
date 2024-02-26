@@ -14,7 +14,7 @@
 * Writing cxematic for wirin connection components
 * Project for VS Code and pure Makefile
 
-<img src="docs/macos-001.jpg" />
+<img src="docs/macos-001.png" />
 Thanx for author!
 
 * Uses inexpensive STM32F4xx "Black Pill" and PCM5102A modules
