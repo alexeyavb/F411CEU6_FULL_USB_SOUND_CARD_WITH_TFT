@@ -1,0 +1,8 @@
+* 1 USB (на динамик)
+* 2 MIC (вирт)
+* 3 [->1], feature SPEAKER
+* 4 [->2], заглушка под feature MIC
+* 5 [->3], Speaker (HW)
+* 6 [->4], USB (на микрофон)
+* 7 SOF SPEAKER
+* 8 ?? NEEDED SOF FOR MIC ???
