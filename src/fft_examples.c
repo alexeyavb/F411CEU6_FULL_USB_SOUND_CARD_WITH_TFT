@@ -85,12 +85,12 @@ void FFT_CalculatePeaksAndFrq(uint32_t audioFs){
         float peakValLeft = 0.00f;
         float peakValRight = 0.00f;
         float CurPeakVal1 = 0.00f;
-        float CurPeakVal2 = 0.00f;
+//         float CurPeakVal2 = 0.00f;
         float peakHz = 0.00f;
 
         // Общий уровень
         CurPeakVal1 = SMOOTH_ABS_LR(fftBufferOutLft[i], fftBufferOutRght[i]);
-        CurPeakVal2 = SMOOTH_ABS_LR_F(fftBufferOutLft[i], fftBufferOutRght[i]);
+//        CurPeakVal2 = SMOOTH_ABS_LR_F(fftBufferOutLft[i], fftBufferOutRght[i]);
         
         // По каналам
         peakValLeft = SMOOTH_ABS(fftBufferOutLft[i]);

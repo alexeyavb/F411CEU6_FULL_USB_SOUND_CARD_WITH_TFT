@@ -28,7 +28,7 @@
 /* Variables */
 extern int errno;
 register char * stack_ptr asm("sp");
-
+caddr_t _ebss;
 /* Functions */
 
 /**
@@ -56,3 +56,22 @@ caddr_t _sbrk(int incr)
 	return (caddr_t) prev_heap_end;
 }
 
+unsigned fillfreememory(){
+    volatile unsigned *top, *start;
+
+    __asm__ volatile ("mov %[top], sp" : [top] "=r" (top) : : );
+    start = &_ebss;
+    while(start < top) {
+        *(start++) = STACK_CANARY_WORD;
+    }
+}
+unsigned check_stack_size(void) {
+    /* top of data section */
+    unsigned *addr = &_ebss;
+    /* look for the canary word till the end of RAM */
+    while ((addr < &_stack) && (*addr == STACK_CANARY_WORD)) {
+        addr++;
+    }
+    
+    return ((unsigned)&_stack - (unsigned)addr);
+}

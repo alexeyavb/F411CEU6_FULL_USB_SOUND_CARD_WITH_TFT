@@ -20,16 +20,27 @@ int main(void) {
 
   
   static const uint8_t STEPS_COUNT = 7U;
-  static const char* P_STEPS[] = {
-                            ":..",
+  static const char* P_STEPS[] = {                            
                             ".P.",
                             ".P:",
                             ":P:",
                             ":P:",
-                            ".::",
-                            "..:",
+                            ":..",
+                            "::.",
+                            ":::"
                             };
 
+  static const char* R_STEPS[] = {                            
+                            ".R.",
+                            ".R:",
+                            ":R:",
+                            ":R:",
+                            ":..",
+                            "::.",
+                            ":::"
+                            };
+
+  UNUSED(R_STEPS);
   HAL_Init();
   SystemClock_Config();
 
@@ -39,7 +50,8 @@ int main(void) {
   bsp_init();
   FFT_Init_FFTHandlers();
 
-  printMsg("USB I2S Audio Bridge");
+  printMsg("USB I2S Audio");
+  printMsg("   Bridge    ");
 
   // Init Device Library
   USBD_Init(&USBD_Device, &AUDIO_Desc, 0);
